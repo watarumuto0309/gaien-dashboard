@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,follow">
-<meta name="description" content="Gaienの月別広告実績とEC改善の計画。">
-<title>Gaien｜広告・EC改善ダッシュボード</title>
+<meta name="description" content="Gaienの月別広告実績と媒体・広告別の内訳。">
+<title>Gaien｜広告ダッシュボード</title>
 <style>
 :root{color-scheme:light;--ink:#192622;--muted:#51645e;--line:#d8e2dc;--bg:#f3f6f2;--surface:#fff;--forest:#132d27;--green:#236957;--pale:#e7f3eb;--meta:#355ed1;--line-media:#208364;--tik:#b14e32;--brand:#c8ebba}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,sans-serif}h1,h2,h3,p,dl,dd{margin:0}h1,h2,h3{line-height:1.25}a{color:var(--green);text-underline-offset:.2em}button{font:inherit}a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid #3766cd;outline-offset:3px}.frame{width:min(1160px,calc(100% - 44px));margin-inline:auto}
@@ -29,11 +29,12 @@ main{padding-top:22px}.numbers,.improvements{display:grid;grid-template-columns:
 .metric-table tbody tr:nth-child(1)>th{color:#236957}.metric-table tbody tr:nth-child(n+2):nth-child(-n+4)>th{color:#355ed1}.metric-table tbody tr:nth-child(n+5)>th{color:#9a4732}
 @media(max-width:575px){.ec-grid{grid-template-columns:1fr}.goal-banner{align-items:flex-start;flex-direction:column;gap:8px;padding:13px}}
 </style>
+<script>if (["#ec", "#organic"].includes(location.hash)) location.replace("https://watarumuto0309.github.io/gaien-dashboard/ec/" + location.hash);</script>
 </head>
 <body>
 <header><div class="frame">
-  <nav aria-label="ページ内メニュー"><span class="brand">GAIEN</span><div class="nav-links"><a href="#advertising">広告実績</a><a href="#report-details">詳しい内訳</a><a href="#ec">EC改善</a><a href="#organic">定期100人への計画</a></div></nav>
-  <h1>広告・EC改善ダッシュボード</h1>
+  <nav aria-label="ダッシュボードのメニュー"><span class="brand">GAIEN</span><div class="nav-links"><a href="#advertising">広告実績</a><a href="#report-details">詳しい内訳</a><a href="https://watarumuto0309.github.io/gaien-dashboard/ec/">EC改善・KPI</a></div></nav>
+  <h1>広告ダッシュボード</h1>
   <p class="hero-note">公開広告データの集計期間　2026年5月28日〜11月3日</p>
 </div></header>
 <main class="frame">
@@ -80,63 +81,6 @@ main{padding-top:22px}.numbers,.improvements{display:grid;grid-template-columns:
 <section class="report"><h3>LPの点検結果（13本）</h3><p class="small">元レポートのブラウザ幅390px・高さ844pxでの測定値。実機の再現状況は未確認で、価格は測定時の表示。</p><div class="table-scroll" tabindex="0" role="region" aria-label="LPコード別のデータ"><table class="detail-table"><thead><tr><th scope="col" class="">LPコード</th><th scope="col" class="">用途</th><th scope="col" class="num">初回の表示価格</th><th scope="col" class="num">フォームまで</th><th scope="col" class="num">フォームの幅</th><th scope="col" class="">測定幅との比較</th></tr></thead><tbody><tr><th scope="row">gaien_adingredient</th><td class="">広告（成分）</td><td class="num">9,900円</td><td class="num">13画面分</td><td class="num">940px</td><td class="">390pxを超過</td></tr><tr><th scope="row">gaien_adingredient2</th><td class="">広告（成分）</td><td class="num">9,900円</td><td class="num">12画面分</td><td class="num">940px</td><td class="">390pxを超過</td></tr><tr><th scope="row">gaien_adingredient_fv02</th><td class="">広告（成分）</td><td class="num">9,900円</td><td class="num">13画面分</td><td class="num">940px</td><td class="">390pxを超過</td></tr><tr><th scope="row">gaien_adanti</th><td class="">広告（アンチテーゼ）</td><td class="num">9,900円</td><td class="num">21画面分</td><td class="num">940px</td><td class="">390pxを超過</td></tr><tr><th scope="row">gaien_adanti2</th><td class="">広告（アンチテーゼ）</td><td class="num">9,900円</td><td class="num">12画面分</td><td class="num">940px</td><td class="">390pxを超過</td></tr><tr><th scope="row">gaien_adanti_fv02</th><td class="">広告（アンチテーゼ）</td><td class="num">9,900円</td><td class="num">13画面分</td><td class="num">940px</td><td class="">390pxを超過</td></tr><tr><th scope="row">gaien_adstory4980</th><td class="">広告（ストーリー）</td><td class="num">4,980円</td><td class="num">12画面分</td><td class="num">940px</td><td class="">390pxを超過</td></tr><tr><th scope="row">gaien</th><td class="">標準</td><td class="num">9,900円</td><td class="num">21画面分</td><td class="num">940px</td><td class="">390pxを超過</td></tr><tr><th scope="row">check</th><td class="">確認用</td><td class="num">9,900円</td><td class="num">15画面分</td><td class="num">940px</td><td class="">390pxを超過</td></tr><tr><th scope="row">check2</th><td class="">確認用</td><td class="num">4,980円</td><td class="num">12画面分</td><td class="num">940px</td><td class="">390pxを超過</td></tr><tr><th scope="row">test</th><td class="">確認用</td><td class="num">4,980円</td><td class="num">12画面分</td><td class="num">940px</td><td class="">390pxを超過</td></tr><tr><th scope="row">gaien_line</th><td class="">LINE</td><td class="num">9,900円（12日間保証）</td><td class="num">13画面分</td><td class="num">293px</td><td class="">390px以内</td></tr><tr><th scope="row">gaien_POPUP</th><td class="">POPUP来場者</td><td class="num">4,980円</td><td class="num">1画面分</td><td class="num">293px</td><td class="">390px以内</td></tr></tbody></table></div></section>
 <section class="report"><h3>競合とGaienの初回価格</h3><p class="small">元レポートに掲載された12商品と、Gaienの広告LPを比較。当時の価格と条件。Gaienの現行条件は商品ページを参照。</p><div class="table-scroll" tabindex="0" role="region" aria-label="商品別のデータ"><table class="detail-table"><thead><tr><th scope="col" class="">商品</th><th scope="col" class="">種類</th><th scope="col" class="num">定価</th><th scope="col" class="num">初回価格</th><th scope="col" class="num">割引</th><th scope="col" class="">当時の特典・条件</th></tr></thead><tbody><tr><th scope="row">PROUST CREAM</th><td class="">ワキガ対策クリーム</td><td class="num">7,238円</td><td class="num">210円</td><td class="num">97%</td><td class="wrap">980円→特別クーポン利用210円 + 返金保証</td></tr><tr><th scope="row">KIRATOTH</th><td class="">歯磨き粉</td><td class="num">9,980円</td><td class="num">680円</td><td class="num">93%</td><td class="wrap">クレカ決済500pt還元 +マウスウォッシュ&amp;歯ブラシ</td></tr><tr><th scope="row">PDRN CREAM</th><td class="">美容クリーム</td><td class="num">3,500円</td><td class="num">980円</td><td class="num">72%</td><td class="wrap">—</td></tr><tr><th scope="row">CICA DERMAヒットセラム5</th><td class="">ニードルクリーム</td><td class="num">3,740円</td><td class="num">980円</td><td class="num">74%</td><td class="wrap">—</td></tr><tr><th scope="row">キヌユイ</th><td class="">クレンジングオイル</td><td class="num">3,300円</td><td class="num">990円</td><td class="num">70%</td><td class="wrap">500ポイント配布→実質490円</td></tr><tr><th scope="row">HORMO</th><td class="">ホルモン育毛剤</td><td class="num">6,980円</td><td class="num">1,980円</td><td class="num">72%</td><td class="wrap">全額返金保証 + ヘアケアブラシ</td></tr><tr><th scope="row">1et1</th><td class="">シミ対策美容液</td><td class="num">8,000円</td><td class="num">1,980円</td><td class="num">75%</td><td class="wrap">返金保証</td></tr><tr><th scope="row">Yunth 豪華特別セット</th><td class="">美容液</td><td class="num">3,960円</td><td class="num">1,980円</td><td class="num">50%</td><td class="wrap">シートマスク1枚</td></tr><tr><th scope="row">ライスフォース</th><td class="">化粧水&amp;クリーム&amp;リップセラム</td><td class="num">8,396円</td><td class="num">1,980円</td><td class="num">76%</td><td class="wrap">2回目以降本品プレゼント</td></tr><tr><th scope="row">bon parme</th><td class="">シャワー＆トリートメント</td><td class="num">3,850円</td><td class="num">1,980円</td><td class="num">49%</td><td class="wrap">返金保証</td></tr><tr><th scope="row">ルミナスローション</th><td class="">化粧水&amp;クリーム&amp;リップセラム</td><td class="num">6,050円</td><td class="num">1,980円</td><td class="num">67%</td><td class="wrap">—</td></tr><tr><th scope="row">キミエリンクルホワイト</th><td class="">薬用オールインワンクリーム</td><td class="num">4,950円</td><td class="num">2,475円</td><td class="num">50%</td><td class="wrap">—</td></tr><tr><th scope="row">Gaien（広告用LP）</th><td class="">美容水＋美乳液</td><td class="num">12,000円</td><td class="num">9,900円（定期）</td><td class="num">18%</td><td class="wrap">送料無料・回数縛りなし</td></tr><tr><th scope="row">Gaien（4,980円版LP）</th><td class="">美容水＋美乳液</td><td class="num">12,000円</td><td class="num">4,980円（定期初回）</td><td class="num">59%</td><td class="wrap">当時のLP表示は全額返金保証・2回目から9,900円</td></tr></tbody></table></div></section>
 <section class="report"><h3>30日計画の目標と実績</h3><p class="small">過去の30日計画は広告予算50万円・売上目標31.8万円。実績の集計範囲は元レポートの全媒体の対象期間。</p><div class="table-scroll" tabindex="0" role="region" aria-label="指標別のデータ"><table class="detail-table"><thead><tr><th scope="col" class="">指標</th><th scope="col" class="num">当時の目標</th><th scope="col" class="num">元レポートの実績</th><th scope="col" class="">判定</th></tr></thead><tbody><tr><th scope="row">CTR（Meta）</th><td class="num">1.5%</td><td class="num">1.00%</td><td class="">未達</td></tr><tr><th scope="row">CPC</th><td class="num">53円</td><td class="num">63円</td><td class="">未達</td></tr><tr><th scope="row">CVR（クリック→媒体CV）</th><td class="num">0.35%</td><td class="num">0.046%</td><td class="">未達</td></tr><tr><th scope="row">CPA</th><td class="num">15,625円</td><td class="num">136,348円</td><td class="">未達</td></tr><tr><th scope="row">媒体CV</th><td class="num">32件</td><td class="num">7件</td><td class="">未達</td></tr><tr><th scope="row">LPの9秒以内離脱</th><td class="num">30%</td><td class="num">41%</td><td class="">未達</td></tr></tbody></table></div></section>
-</section>
-<section class="panel" id="ec">
-  <div class="heading"><h2>EC改善計画</h2></div>
-  <p class="small">競合・参考ECの公開ページ105件を比較。定期便の案内は51件、トライアル関連の案内は44件。Gaienでは既存の商品ページ・素材・FAQを使い、まず購入前に必要な情報をそろえる。</p>
-  <div class="improvements ec-grid">
-    <article class="tile" style="--mark:var(--green)">
-      <h3>通常便と定期便の比較</h3>
-      <dl><div><dt>仮説</dt><dd>価格や送料、解約条件を別々に探すと購入を判断しづらい。</dd></div>
-      <div><dt>改善案</dt><dd>ECトップの購入ガイドに、通常便と定期便の価格・送料・周期・解約方法を並べる。</dd></div>
-      <div><dt>測り方</dt><dd>ガイドからの商品ページ到達と定期購入ボタンのクリックを確認する。</dd></div></dl>
-    </article>
-    <article class="tile" style="--mark:var(--meta)">
-      <h3>2本の役割と使う順番</h3>
-      <dl><div><dt>仮説</dt><dd>2本の役割と使う順番が分かると、夜のケアに取り入れやすい。</dd></div>
-      <div><dt>改善案</dt><dd>美容水を振ってなじませ、美乳液を重ねる流れを、商品ページとSNSの既存素材で伝える。</dd></div>
-      <div><dt>測り方</dt><dd>使い方を紹介した投稿からの商品ページ到達と、その後の購入クリックを追う。</dd></div></dl>
-    </article>
-    <article class="tile" style="--mark:var(--tik)">
-      <h3>初回保証の見せ方</h3>
-      <dl><div><dt>仮説</dt><dd>適用条件と利用時の負担額が先に分かると、購入前の不安を減らせる。</dd></div>
-      <div><dt>改善案</dt><dd>購入ボタンの近くに初回保証の条件と利用時の負担を要約し、詳細とFAQに案内する。</dd></div>
-      <div><dt>測り方</dt><dd>保証・送料・解約の問い合わせと、購入後の返金を確認する。</dd></div></dl>
-    </article>
-    <article class="tile" style="--mark:var(--line-media)">
-      <h3>定期2回目までの案内</h3>
-      <dl><div><dt>仮説</dt><dd>使用ペースと次回のお届けが分かると、継続を判断しやすい。</dd></div>
-      <div><dt>改善案</dt><dd>既存の購入後案内とFAQに、使用量の目安、次回のお届け、サイクルの確認方法を載せる。</dd></div>
-      <div><dt>測り方</dt><dd>2回目決済率と、解約・休止の理由を確認する。</dd></div></dl>
-    </article>
-  </div>
-</section>
-<section class="panel" id="organic">
-  <div class="heading"><h2>広告費0円で定期100人を目指す計画</h2></div>
-  <div class="goal-banner">
-    <div class="goal-number">100<small>人</small></div>
-    <div class="goal-copy"><h3>KGI｜月末時点で継続中の定期顧客（仮目標）</h3><p>初回決済が完了し、月末時点で継続中の顧客を1人1回数える。達成期限は検討中。</p></div>
-  </div>
-  <div class="table-scroll" tabindex="0" role="region" aria-label="定期100人に向けたKGI・KPI・KDI">
-    <table class="metric-table">
-      <thead><tr><th scope="col">区分</th><th scope="col">指標</th><th scope="col">集計・実行のしかた</th></tr></thead>
-      <tbody>
-        <tr><th scope="row">KGI</th><td>継続中の定期顧客100人</td><td>ecforceで月末に確認。前月末からの増減とEC売上も併記して追う。</td></tr>
-        <tr><th scope="row">KPI</th><td>新規定期の初回決済人数</td><td>その月に定期の初回決済を終えた顧客を数える。</td></tr>
-        <tr><th scope="row">KPI</th><td>2回目決済率、解約・休止人数</td><td>2回目のお届け予定日を迎えた初回購入者のうち、2回目まで決済した割合を見る。解約・休止は月ごとに数える。</td></tr>
-        <tr><th scope="row">KPI</th><td>商品ページ到達、定期購入クリック</td><td>Instagram・LINEのリンクを識別し、流入元別の到達と購入ボタンのクリックを週ごとに確認する。</td></tr>
-        <tr><th scope="row">KDI</th><td>SNS投稿、購入導線の点検</td><td>既存素材で週1本投稿。週1回、流入元を区別したリンクから商品ページ・購入ボタンまでを点検する。</td></tr>
-        <tr><th scope="row">KDI</th><td>購入ガイドと継続案内の改善</td><td>購入ガイドを整え、購入後の使い方・お届けの案内とFAQを月1回見直す。</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small metric-guide">定期顧客を増やすには、初回決済を増やすことと、2回目につなげることの両方を見る。現時点の定期顧客数と最初の計測結果をもとに、毎月必要な純増人数を決める。</p>
-  <div class="week-plan">
-    <h3>最初の4週間</h3>
-    <ol><li><b>第1週</b>　購入ガイド案と商品ページを照合し、流入元別のリンクと購入ボタンの計測を確認。</li>
-    <li><b>第2〜3週</b>　「2本を組み合わせる理由」と「夜の2ステップ」を、既存のInstagramとLINEで比較する。</li>
-    <li><b>第4週</b>　到達、購入クリック、初回決済を確認して翌月の目標を設定。2回目は配送周期に合わせて追う。</li></ol>
-  </div>
 </section>
 <footer><a href="https://gaien-ad-dashboard.pages.dev/">広告データの出典</a></footer>
 </main>
