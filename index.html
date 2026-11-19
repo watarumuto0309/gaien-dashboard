@@ -26,7 +26,7 @@ main{padding-top:22px}.numbers,.improvements{display:grid;grid-template-columns:
 .ec-grid h3{margin-bottom:10px}.ec-grid dl{font-size:.88rem}.ec-grid dl div{display:grid;grid-template-columns:4.2em minmax(0,1fr);gap:8px;margin-top:7px}.ec-grid dt{color:var(--green);font-weight:700}
 .goal-banner{display:flex;gap:15px 26px;align-items:center;padding:16px 19px;border-radius:10px;background:var(--forest);color:#eff8ed;margin-top:13px}.goal-number{font-size:clamp(2.5rem,6vw,4rem);font-weight:760;line-height:1;white-space:nowrap;color:var(--brand)}.goal-number small{font-size:.42em;margin-left:3px}.goal-copy p{margin-top:5px;font-size:.89rem;color:#d3e8dc}
 .metric-table th:nth-child(2){min-width:8em}.metric-table td{white-space:normal;min-width:11em}.metric-guide{margin-top:12px}.week-plan{margin-top:18px;border-top:1px solid var(--line);padding-top:15px}.week-plan ol{margin:8px 0 0;padding-left:1.3rem;font-size:.9rem}.week-plan li{padding:4px 0}
-.metric-table tbody tr:nth-child(1)>th{color:#236957}.metric-table tbody tr:nth-child(n+2):nth-child(-n+4)>th{color:#355ed1}.metric-table tbody tr:nth-child(n+5)>th{color:#9a4732}
+.metric-table tbody tr:nth-child(1)>th{color:#236957}.metric-table tbody tr:nth-child(n+2):nth-child(-n+5)>th{color:#355ed1}.metric-table tbody tr:nth-child(n+6)>th{color:#9a4732}
 @media(max-width:575px){.ec-grid{grid-template-columns:1fr}.goal-banner{align-items:flex-start;flex-direction:column;gap:8px;padding:13px}}
 </style>
 <script>if (["#ec", "#organic"].includes(location.hash)) location.replace("https://watarumuto0309.github.io/gaien-dashboard/ec/" + location.hash);</script>
@@ -45,7 +45,7 @@ main{padding-top:22px}.numbers,.improvements{display:grid;grid-template-columns:
   <div class="score" style="--mark:var(--tik)"><dt>媒体CV</dt><dd>7<small>件</small></dd></div>
 </dl>
 <section class="panel" id="advertising">
-  <div class="heading"><h2>月別の広告実績</h2><div class="metric-tabs" role="group" aria-label="グラフの指標"><button type="button" data-metric="spend" aria-pressed="true">媒体費</button><button type="button" data-metric="click" aria-pressed="false">クリック</button><button type="button" data-metric="cv" aria-pressed="false">媒体CV</button></div></div>
+  <div class="heading"><h2>月別の広告・LP実績</h2><div class="metric-tabs" role="group" aria-label="グラフの指標"><button type="button" data-metric="spend" aria-pressed="true">媒体費</button><button type="button" data-metric="click" aria-pressed="false">広告クリック</button><button type="button" data-metric="cv" aria-pressed="false">媒体CV</button></div></div>
   <p class="small">月を選ぶと、その月の費用・クリック・媒体CVを確認できます。</p>
   <div class="chart-layout">
     <div>
@@ -54,21 +54,22 @@ main{padding-top:22px}.numbers,.improvements{display:grid;grid-template-columns:
     </div>
     <div class="snapshot" aria-live="polite">
       <h3 id="picked-month">8月の広告実績</h3>
-      <dl><div><dt>媒体費</dt><dd id="picked-spend">221,188円</dd></div><div><dt>クリック</dt><dd id="picked-click">4,874回</dd></div><div><dt>媒体CV</dt><dd id="picked-cv">1件</dd></div><div><dt>媒体</dt><dd id="picked-media">Meta・LINEヤフー・TikTok</dd></div></dl>
+      <dl><div><dt>媒体費</dt><dd id="picked-spend">221,188円</dd></div><div><dt>広告クリック</dt><dd id="picked-click">4,874回</dd></div><div><dt>媒体CV</dt><dd id="picked-cv">1件</dd></div><div><dt>媒体</dt><dd id="picked-media">Meta・LINEヤフー・TikTok</dd></div></dl>
     </div>
   </div>
-  <div class="table-scroll" tabindex="0" role="region" aria-label="広告の月別明細"><table>
-    <thead><tr><th scope="col">月</th><th scope="col">利用媒体</th><th class="num" scope="col">媒体費</th><th class="num" scope="col">クリック</th><th class="num" scope="col">媒体CV</th></tr></thead>
-    <tbody><tr><th scope="row">5月</th><td>Meta</td><td class="num">65,590円</td><td class="num">449</td><td class="num">0</td></tr>
-<tr><th scope="row">6月</th><td>Meta</td><td class="num">345,303円</td><td class="num">1,756</td><td class="num">5</td></tr>
-<tr><th scope="row">7月</th><td>Meta</td><td class="num">232,529円</td><td class="num">3,250</td><td class="num">0</td></tr>
-<tr><th scope="row">8月</th><td>Meta・LINEヤフー・TikTok</td><td class="num">221,188円</td><td class="num">4,874</td><td class="num">1</td></tr>
-<tr><th scope="row">9月</th><td>公開レポートに記録なし</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
-<tr><th scope="row">10月</th><td>LINEヤフー</td><td class="num">68,800円</td><td class="num">4,690</td><td class="num">1</td></tr>
-<tr><th scope="row">11月（3日まで）</th><td>LINEヤフー</td><td class="num">21,028円</td><td class="num">241</td><td class="num">0</td></tr></tbody>
-    <tfoot><tr><th scope="row">計</th><td></td><td class="num">954,438円</td><td class="num">15,260</td><td class="num">7</td></tr></tfoot>
+  <div class="table-scroll" tabindex="0" role="region" aria-label="広告とLPの月別明細"><table>
+    <thead><tr><th scope="col">月</th><th scope="col">利用媒体</th><th class="num" scope="col">媒体費</th><th class="num" scope="col">広告クリック</th><th class="num" scope="col">媒体CV</th><th class="num" scope="col">LP表示</th><th class="num" scope="col">LP内クリック</th></tr></thead>
+    <tbody><tr><th scope="row">5月</th><td>Meta</td><td class="num">65,590円</td><td class="num">449</td><td class="num">0</td><td class="num">—</td><td class="num">—</td></tr>
+<tr><th scope="row">6月</th><td>Meta</td><td class="num">345,303円</td><td class="num">1,756</td><td class="num">5</td><td class="num">—</td><td class="num">—</td></tr>
+<tr><th scope="row">7月</th><td>Meta</td><td class="num">232,529円</td><td class="num">3,250</td><td class="num">0</td><td class="num">—</td><td class="num">—</td></tr>
+<tr><th scope="row">8月</th><td>Meta・LINEヤフー・TikTok</td><td class="num">221,188円</td><td class="num">4,874</td><td class="num">1</td><td class="num">6,203</td><td class="num">4,468</td></tr>
+<tr><th scope="row">9月</th><td>広告の記録なし</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">1,050</td><td class="num">398</td></tr>
+<tr><th scope="row">10月</th><td>LINEヤフー</td><td class="num">68,800円</td><td class="num">4,690</td><td class="num">1</td><td class="num">2,512</td><td class="num">607</td></tr>
+<tr><th scope="row">11月</th><td>LINEヤフー</td><td class="num">21,028円</td><td class="num">241</td><td class="num">0</td><td class="num">282</td><td class="num">107</td></tr></tbody>
+    <tfoot><tr><th scope="row">計</th><td></td><td class="num">954,438円</td><td class="num">15,260</td><td class="num">7</td><td class="num">10,047</td><td class="num">5,580</td></tr></tfoot>
   </table></div>
-  <p class="small table-note">媒体費は手数料別。手数料込みの参考額は、元レポートと同じ20%で試算。媒体CVは各広告媒体で計測したコンバージョン。9月は公開レポートに記録なし。<a href="https://gaien-ad-dashboard.pages.dev/">元の公開広告レポート</a></p>
+  <p class="small table-note"><b>広告</b>　5月28日〜11月3日。クリックとCVは各広告媒体の報告値。媒体費は手数料別、手数料込みの参考額は元レポートと同じ20%で試算。<a href="https://gaien-ad-dashboard.pages.dev/">元の公開広告レポート</a></p>
+  <p class="small table-note"><b>LP（Clarity）</b>　8月1日〜11月19日。対象はメインLP <code>/lp</code>。流入元を問わず、ページ上のボタン・リンク・フォームなどのクリックやタップを合計。5〜7月の「—」はLPデータ未集計。</p>
 </section>
 <section class="panel" id="report-details">
   <div class="heading"><h2>広告の詳しい内訳</h2><a class="small" href="https://gaien-ad-dashboard.pages.dev/">元レポート</a></div>
@@ -86,7 +87,7 @@ main{padding-top:22px}.numbers,.improvements{display:grid;grid-template-columns:
 </main>
 <script>
 const data = [{"label": "5月", "short": "5月", "media": "Meta", "breakdown": [{"spend": 65590, "click": 449, "cv": 0}, {"spend": 0, "click": 0, "cv": 0}, {"spend": 0, "click": 0, "cv": 0}], "total": {"spend": 65590, "click": 449, "cv": 0}}, {"label": "6月", "short": "6月", "media": "Meta", "breakdown": [{"spend": 345303, "click": 1756, "cv": 5}, {"spend": 0, "click": 0, "cv": 0}, {"spend": 0, "click": 0, "cv": 0}], "total": {"spend": 345303, "click": 1756, "cv": 5}}, {"label": "7月", "short": "7月", "media": "Meta", "breakdown": [{"spend": 232529, "click": 3250, "cv": 0}, {"spend": 0, "click": 0, "cv": 0}, {"spend": 0, "click": 0, "cv": 0}], "total": {"spend": 232529, "click": 3250, "cv": 0}}, {"label": "8月", "short": "8月", "media": "Meta・LINEヤフー・TikTok", "breakdown": [{"spend": 143869, "click": 2004, "cv": 1}, {"spend": 59132, "click": 1523, "cv": 0}, {"spend": 18187, "click": 1347, "cv": 0}], "total": {"spend": 221188, "click": 4874, "cv": 1}}, {"label": "9月", "short": "9月", "media": "", "breakdown": [{"spend": 0, "click": 0, "cv": 0}, {"spend": 0, "click": 0, "cv": 0}, {"spend": 0, "click": 0, "cv": 0}], "total": {"spend": null, "click": null, "cv": null}}, {"label": "10月", "short": "10月", "media": "LINEヤフー", "breakdown": [{"spend": 0, "click": 0, "cv": 0}, {"spend": 68800, "click": 4690, "cv": 1}, {"spend": 0, "click": 0, "cv": 0}], "total": {"spend": 68800, "click": 4690, "cv": 1}}, {"label": "11月（3日まで）", "short": "11月", "media": "LINEヤフー", "breakdown": [{"spend": 0, "click": 0, "cv": 0}, {"spend": 21028, "click": 241, "cv": 0}, {"spend": 0, "click": 0, "cv": 0}], "total": {"spend": 21028, "click": 241, "cv": 0}}];
-const labels={spend:"媒体費",click:"クリック",cv:"媒体CV"};
+const labels={spend:"媒体費",click:"広告クリック",cv:"媒体CV"};
 const units={spend:"円",click:"回",cv:"件"};
 const colors=["var(--meta)","var(--line-media)","var(--tik)"];
 const format=new Intl.NumberFormat("ja-JP");
