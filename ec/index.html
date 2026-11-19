@@ -26,13 +26,27 @@ main{padding-top:22px}.numbers,.improvements{display:grid;grid-template-columns:
 .ec-grid h3{margin-bottom:10px}.ec-grid dl{font-size:.88rem}.ec-grid dl div{display:grid;grid-template-columns:4.2em minmax(0,1fr);gap:8px;margin-top:7px}.ec-grid dt{color:var(--green);font-weight:700}
 .goal-banner{display:flex;gap:15px 26px;align-items:center;padding:16px 19px;border-radius:10px;background:var(--forest);color:#eff8ed;margin-top:13px}.goal-number{font-size:clamp(2.5rem,6vw,4rem);font-weight:760;line-height:1;white-space:nowrap;color:var(--brand)}.goal-number small{font-size:.42em;margin-left:3px}.goal-copy p{margin-top:5px;font-size:.89rem;color:#d3e8dc}
 .metric-table th:nth-child(2){min-width:8em}.metric-table td{white-space:normal;min-width:11em}.metric-guide{margin-top:12px}.week-plan{margin-top:18px;border-top:1px solid var(--line);padding-top:15px}.week-plan ol{margin:8px 0 0;padding-left:1.3rem;font-size:.9rem}.week-plan li{padding:4px 0}
-.metric-table tbody tr:nth-child(1)>th{color:#236957}.metric-table tbody tr:nth-child(n+2):nth-child(-n+4)>th{color:#355ed1}.metric-table tbody tr:nth-child(n+5)>th{color:#9a4732}
+.metric-table tbody tr:nth-child(1)>th{color:#236957}.metric-table tbody tr:nth-child(n+2):nth-child(-n+5)>th{color:#355ed1}.metric-table tbody tr:nth-child(n+6)>th{color:#9a4732}
 @media(max-width:575px){.ec-grid{grid-template-columns:1fr}.goal-banner{align-items:flex-start;flex-direction:column;gap:8px;padding:13px}}
+</style>
+<style>
+.soft-note{font-size:.88rem;color:var(--muted)}
+.operation-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:14px 0}
+.operation-grid h3{margin-bottom:7px}
+.operation-grid .tile p{margin:7px 0}.operation-grid .tile p:last-child{margin-bottom:0}
+.operation-grid ol{margin:9px 0;padding-left:1.25em;font-size:.91rem}.operation-grid li{margin:5px 0}
+.operation-grid .context{font-weight:650}.operation-grid blockquote{margin:10px 0;padding:9px 11px;background:#fff;border-radius:6px;font-size:.89rem}
+.hypothesis-lead,.decision-note{padding:11px 14px;margin:11px 0;background:var(--pale);border-radius:8px}
+.hypothesis-group{margin:20px 0 7px;color:var(--green);font-size:1.1rem}
+.hypothesis-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:27px;margin:0;padding-left:1.5em}
+.hypothesis-list li{padding:9px 0;border-top:1px solid var(--line);break-inside:avoid}
+.hypothesis-list li::marker{color:var(--green);font-weight:750}.hypothesis-list li p{margin:4px 0 0;font-size:.88rem;color:var(--muted)}
+@media(max-width:690px){.operation-grid,.hypothesis-list{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <header><div class="frame">
-  <nav aria-label="ダッシュボードのメニュー"><span class="brand">GAIEN</span><div class="nav-links"><a href="#ec">EC改善</a><a href="#organic">定期100人への計画</a><a href="https://watarumuto0309.github.io/gaien-dashboard/">広告ダッシュボード</a></div></nav>
+  <nav aria-label="ダッシュボードのメニュー"><span class="brand">GAIEN</span><div class="nav-links"><a href="#ec">EC改善</a><a href="#organic">定期100人</a><a href="#operations">現場で試す施策</a><a href="#hypotheses">仮説20件</a><a href="https://watarumuto0309.github.io/gaien-dashboard/">広告ダッシュボード</a></div></nav>
   <h1>EC改善・KPIダッシュボード</h1>
   <p class="hero-note">通常便と定期便の選び方から、定期購入後の継続まで見直す。</p>
 </div></header>
@@ -77,7 +91,8 @@ main{padding-top:22px}.numbers,.improvements{display:grid;grid-template-columns:
     <table class="metric-table">
       <thead><tr><th scope="col">区分</th><th scope="col">指標</th><th scope="col">集計・実行のしかた</th></tr></thead>
       <tbody>
-        <tr><th scope="row">KGI</th><td>継続中の定期顧客100人</td><td>ecforceで月末に確認。前月末からの増減とEC売上も併記して追う。</td></tr>
+        <tr><th scope="row">KGI</th><td>継続中の定期顧客100人</td><td>ecforceで月末に確認。事業全体では月間売上も追う。</td></tr>
+        <tr><th scope="row">主KPI</th><td>月間の定期顧客純増</td><td>当月末の継続中の人数から前月末の人数を引く。新規・再開・解約・休止を合わせて確認する。</td></tr>
         <tr><th scope="row">KPI</th><td>新規定期の初回決済人数</td><td>その月に定期の初回決済を終えた顧客を数える。</td></tr>
         <tr><th scope="row">KPI</th><td>2回目決済率、解約・休止人数</td><td>2回目のお届け予定日を迎えた初回購入者のうち、2回目まで決済した割合を見る。解約・休止は月ごとに数える。</td></tr>
         <tr><th scope="row">KPI</th><td>商品ページ到達、定期購入クリック</td><td>Instagram・LINEのリンクを識別し、流入元別の到達と購入ボタンのクリックを週ごとに確認する。</td></tr>
@@ -93,6 +108,90 @@ main{padding-top:22px}.numbers,.improvements{display:grid;grid-template-columns:
     <li><b>第2〜3週</b>　「2本を組み合わせる理由」と「夜の2ステップ」を、既存のInstagramとLINEで比較する。</li>
     <li><b>第4週</b>　到達、購入クリック、初回決済を確認して翌月の目標を設定。2回目は配送周期に合わせて追う。</li></ol>
   </div>
+</section>
+<section class="panel" id="operations">
+  <div class="heading"><h2>現場で試す4つの施策</h2></div>
+  <p class="soft-note">毎月の主KPIは定期顧客の純増（当月末の継続人数 − 前月末の継続人数）。施策ごとのKPIで、次に手を入れる場所を判断する。</p>
+  <div class="operation-grid">
+    <article class="tile" style="--mark:var(--green)">
+      <h3>POPUP接客マニュアル</h3>
+      <p class="context">現場報告　単品購入2件・定期購入0件。接客人数と集計期間は未確認。</p>
+      <ol>
+        <li><b>使い方を聞く。</b> 夜のお手入れの流れを聞き、テスターがあれば美容水から美乳液を重ねる順番で試してもらう。</li>
+        <li><b>購入方法を比べる。</b> 会場・ECの表示を確認して、通常・定期の総額、次回価格、送料、周期、変更・解約方法を同じ順番で伝える。</li>
+        <li><b>次の行動を案内する。</b> 購入希望には会場用フォーム。後で検討したい人には、希望に応じて使い方や購入条件を見られるLINE・QRを案内。</li>
+      </ol>
+      <blockquote>「まず一度使ってみたいですか。それとも、合いそうなら定期も検討したいですか。通常と定期の条件をここで比べられます。」</blockquote>
+      <p><b>KPI</b>　会場経由の定期初回決済。接客数・比較案内数・単品購入数・LINE追加も残す。</p>
+      <p><b>KDI</b>　次回出店で台本を使い、閉店後に件数と実際に聞いた見送り理由を集計する。</p>
+    </article>
+    <article class="tile" style="--mark:var(--line-media)">
+      <h3>購入後LINEと既存顧客の継続</h3>
+      <p class="context">購入完了画面や会場で公式LINEを案内。最初は「登録直後＋使用開始後の1通」を試す。</p>
+      <ol>
+        <li><b>登録直後</b>　2ステップの順番と使用量、よくある質問を案内する。</li>
+        <li><b>使用開始から約1週間・単品購入者</b>　使い方の補足と、続けたい人向けに通常・定期の比較を案内する。</li>
+        <li><b>使用開始から約1週間・定期購入者</b>　次回のお届けの確認先とFAQを案内する。購入種別・日付が分かる範囲で分けて配信する。</li>
+      </ol>
+      <p>注文メールと重なる内容を確認し、配信数・クリック・ブロックを見て頻度を調整する。次回予定を知らせる場合は、変更期限と実際のお届け予定日に合わせる。</p>
+      <p><b>KPI</b>　購入者LINE追加数、単品から定期への初回決済、2回目決済の人数と率、解約・休止人数。</p>
+      <p><b>KDI</b>　既存配信を確認して単品・定期向けの文面を作り、週1回結果を確認する。</p>
+    </article>
+    <article class="tile" style="--mark:var(--meta)">
+      <h3>少ない流入から定期を獲得する</h3>
+      <p>通常・定期の比較をECトップに1ブロック置く。初回と次回以降の価格・送料・周期・変更条件をそろえ、商品ページの使い方と保証への導線を確認する。</p>
+      <p><b>KPI</b>　商品ページ到達数、定期購入ボタンのクリック数、初回決済人数。</p>
+      <p><b>KDI</b>　購入ガイド1ブロックを試し、スマホで購入までの導線と計測を点検。少ない件数は実数と率を併記する。</p>
+    </article>
+    <article class="tile" style="--mark:var(--tik)">
+      <h3>追加広告費をかけずに流入を増やす</h3>
+      <p>既存POPUPのQRと自社Instagramから始め、過去PRで反応があった訴求を再活用する。流入元ごとにリンクを分け、同じ商品ページで比較する。</p>
+      <p><b>KPI</b>　POPUP・Instagram・PR別の商品ページ到達と定期初回決済。</p>
+      <p><b>KDI</b>　既存素材で週1本、過去PRを1件ずつ確認。会場の質問をFAQに反映して検索からの入口にもする。</p>
+    </article>
+  </div>
+  <p class="soft-note">POPUPで知ってLINEから購入した場合は、最初の接点と購入直前の経路を記録し、注文は1件として集計する。</p>
+</section>
+<section class="panel" id="hypotheses">
+  <div class="heading"><h2>次につながる仮説20件</h2></div>
+  <p class="hypothesis-lead"><b>Amazonは強化候補。</b> 出品済みの商品で、まず直近30日のセッション、注文点数、ユニットセッション率、手数料・配送費・商品原価を引いた残りを確認する。流入が少ないなら検索での見つけやすさ、流入があって購入が少ないなら商品説明や条件から検証する。<a href="https://sellercentral.amazon.co.jp/help/hub/reference/external/G5T9UKA4NXTH7G4S">Amazonの実績指標</a> · <a href="https://sell.amazon.co.jp/pricing">販売手数料</a></p>
+  <p class="soft-note">Amazon・Qoo10・卸の成果は事業売上と採算で追う。自社の定期100人への貢献は、経路が確認できた定期初回決済と継続で見る。</p>
+  <h3 class="hypothesis-group">Amazon・Qoo10</h3>
+  <ol class="hypothesis-list">
+    <li><b>Amazonの商品ページで夜の2ステップが伝われば、購入が増える。</b><p>既存画像1枚で「何が届くか・使う順番」を見せ、レビューの整理で挙がった使用感と手軽さを訴求候補にする。見る数字はセッション、注文点数、ユニットセッション率。</p></li>
+    <li><b>検索される用途に商品情報を合わせると、Amazonで見つけてもらいやすい。</b><p>既存のタイトルと商品属性で、ナイトケア・美容水・乳液の情報を確認して1か所改善。広告を増やさずセッションの推移を見る。</p></li>
+    <li><b>Qoo10のセット内容と配送条件が分かりやすければ、通常購入につながる。</b><p>出品済みの1商品で画像・説明・到着目安を点検。閲覧、注文と手数料等を差し引いた残りを確認する。</p></li>
+    <li><b>使用感を試せるQoo10の体験企画なら、初見でも商品の価値を理解しやすい。</b><p>参加枠、費用、最低サンプル数を先に確認し、条件が合う場合に企画を検討。体験後の商品ページ到達と購入を測る。<a href="https://article-university.qoo10.jp/entry/2026/10/08/113827">Qoo10の体験企画</a></p></li>
+  </ol>
+  <h3 class="hypothesis-group">POPUP</h3>
+  <ol class="hypothesis-list" start="5">
+    <li><b>接客で通常と定期を同時に比べられれば、定期を選ぶ人が出る。</b><p>次の出店で比較台本を使う。案内人数、単品・定期の決済、見送り理由を数える。</p></li>
+    <li><b>美容水と美乳液を順番に体験すると、2本を使う理由が伝わりやすい。</b><p>既存のテスターで2ステップを案内。体験数、仕上がりを好んだ人、購入まで進んだ数を見る。</p></li>
+    <li><b>会場で決めなかった人も、帰宅後に条件を確認できれば購入候補になる。</b><p>希望者に会場別QRを案内。QRからのアクセス、LINE追加、後日の初回決済を追う。</p></li>
+  </ol>
+  <h3 class="hypothesis-group">購入後LINE・継続</h3>
+  <ol class="hypothesis-list" start="8">
+    <li><b>購入直後に使い方を受け取れると、購入者がLINEを追加しやすい。</b><p>購入完了画面または会場の案内を1か所見直す。購入数に対するLINE追加数と使い方リンクのクリックを確認する。</p></li>
+    <li><b>使い始めた後に定期の条件を見られれば、単品購入から定期に進みやすい。</b><p>単品購入者向けの案内を1通用意し、比較ページの到達と初回定期決済を追う。</p></li>
+    <li><b>使い方や次回確認先が分かれば、定期2回目の前に困りごとを解消できる。</b><p>定期購入者向けにFAQと次回確認先を案内。2回目決済の人数と率、問い合わせ・休止理由を確認する。</p></li>
+    <li><b>注文メールとの重複を減らすと、必要なLINEが読まれやすい。</b><p>現在の配信とメールを一覧で比較。重複する案内を1件減らした場合のクリック・ブロック数を確認する。</p></li>
+  </ol>
+  <h3 class="hypothesis-group">自社EC</h3>
+  <ol class="hypothesis-list" start="12">
+    <li><b>通常・定期の総額と周期を最初に比べられれば、購入を判断しやすくなる。</b><p>ECトップに比較ブロックを追加する案を試す。商品リンクのクリックと定期初回決済を見る。</p></li>
+    <li><b>商品ページの上部で夜の使い方が分かれば、商品価値を伝えやすい。</b><p>既存写真で使う順番を1ブロックにする。商品到達後の定期ボタンクリックを比較する。</p></li>
+    <li><b>保証の条件と負担が購入前に見えれば、迷いが減る。</b><p>購入ボタン近くの保証リンクと説明を見直す。保証に関する質問と購入後の返金数を追う。</p></li>
+    <li><b>スマホで定期ボタンの位置が分かりやすければ、購入画面に進む人が増える。</b><p>実機で商品ページから購入画面までを点検する。ボタン押下と注文開始の差を確認する。</p></li>
+  </ol>
+  <h3 class="hypothesis-group">広告以外の集客と販売</h3>
+  <ol class="hypothesis-list" start="16">
+    <li><b>Instagramで使用場面を見せると、商品ページへの流入が増える。</b><p>既存画像で「2本を組み合わせる理由」と「夜の2ステップ」を順に試す。投稿別リンクの到達を比較する。</p></li>
+    <li><b>過去PRで購入に近かった訴求を再利用すると、投稿の成果を改善できる。</b><p>もちゃころなど既存のPRを再生・アクセス・購入まで振り返る。自社素材で再現した投稿の到達と初回決済を測る。</p></li>
+    <li><b>会場で多い質問を公開FAQにすると、検索から商品にたどり着く入口になる。</b><p>使う順番・周期など実際の質問から1本公開する案。検索表示、クリック、FAQから商品ページへの遷移を追う。</p></li>
+    <li><b>TikTok Shopの既存クリエイター経由で利益が残るなら、追加広告を使わず売上を増やせる。</b><p>過去のTAP実績を、注文・手数料・報酬・返品・配送込みで見直す。採算が確認できた施策を継続候補にする。</p></li>
+    <li><b>過去に接点のあった温浴・サロン施設なら、新規の卸開拓より小さく試せる。</b><p>過去の反応がよかった接点を1件選び、少量テストの条件を試算する。卸売上、利益、準備工数、再発注で判断する。</p></li>
+  </ol>
+  <p class="decision-note"><b>先に進める順番</b>　Amazonは直近30日の数字確認。次回POPUPは比較台本を試す。自社ECは購入ガイド1ブロックから。並行してLINEの既存配信と購入後の案内を点検し、単品向け・定期向けの文面を用意する。</p>
 </section>
 </main>
 </body>
